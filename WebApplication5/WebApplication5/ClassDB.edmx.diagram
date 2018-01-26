@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a9723301d7fd43ffa1771b02d0e7de5c" Name="Diagram1" >
+        <EntityTypeShape EntityType="DB_ClassModel.Class" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_ClassModel.Class_Schedule" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_ClassModel.Contact_Person" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DB_ClassModel.Contact_Person_Student" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_ClassModel.Instructor" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DB_ClassModel.Student" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_ClassModel.Test" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DB_ClassModel.Test_Attend_Marks" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="DB_ClassModel.Attendance" Width="1.5" PointX="9" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_ClassModel.attendence_outcome" Width="1.5" PointX="6.75" PointY="12.5" />
+        <EntityTypeShape EntityType="DB_ClassModel.class_type" Width="1.5" PointX="0.75" PointY="7.375" />
+        <EntityTypeShape EntityType="DB_ClassModel.drop_Attendence_Reason" Width="1.5" PointX="6.75" PointY="10.25" />
+        <EntityTypeShape EntityType="DB_ClassModel.sysdiagram" Width="1.5" PointX="3.375" PointY="7.75" />
+        <AssociationConnector Association="DB_ClassModel.FK__Attendanc__atten__5DCAEF64" />
+        <AssociationConnector Association="DB_ClassModel.FK__Attendanc__Class__5BE2A6F2" />
+        <AssociationConnector Association="DB_ClassModel.FK__Attendanc__Reaso__5CD6CB2B" />
+        <AssociationConnector Association="DB_ClassModel.FK__Attendanc__Stude__5AEE82B9" />
+        <AssociationConnector Association="DB_ClassModel.FK__Class__class_typ__4BAC3F29" />
+        <AssociationConnector Association="DB_ClassModel.FK__Class_Sch__Class__4CA06362" />
+        <AssociationConnector Association="DB_ClassModel.FK__Test__ClassID__5EBF139D" />
+        <AssociationConnector Association="DB_ClassModel.FK__Contact_P__Conta__5165187F" />
+        <AssociationConnector Association="DB_ClassModel.FK__Contact_P__Conta__52593CB8" />
+        <AssociationConnector Association="DB_ClassModel.FK__Test_Atte__Stude__60A75C0F" />
+        <AssociationConnector Association="DB_ClassModel.FK__Test_Atte__TestI__5FB337D6" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
