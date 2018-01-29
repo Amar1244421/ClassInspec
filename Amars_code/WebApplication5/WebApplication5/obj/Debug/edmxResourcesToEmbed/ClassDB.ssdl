@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_ClassModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Attendance">
+    <Key>
+      <PropertyRef Name="AttendID" />
+    </Key>
+    <Property Name="AttendID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentID" Type="int" />
+    <Property Name="ClassID" Type="int" />
+    <Property Name="class_enrollment_date" Type="date" />
+    <Property Name="class_drop_date" Type="date" />
+    <Property Name="ReasonID" Type="int" />
+    <Property Name="attendence_outcome" Type="int" />
+  </EntityType>
+  <EntityType Name="attendence_outcome">
+    <Key>
+      <PropertyRef Name="attendence_outcome" />
+    </Key>
+    <Property Name="attendence_outcome" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OutcomeText" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ClassID" Type="int" Nullable="false" />
+    <Property Name="class_typeID" Type="int" />
+    <Property Name="name" Type="varchar" MaxLength="128" />
+    <Property Name="Description_Of_Class" Type="varchar" MaxLength="256" />
+    <Property Name="Startdate" Type="date" />
+    <Property Name="Enddate" Type="date" />
+    <Property Name="Completed" Type="bit" />
+  </EntityType>
+  <EntityType Name="Class_Schedule">
+    <Key>
+      <PropertyRef Name="Class_ScheduleID" />
+    </Key>
+    <Property Name="Class_ScheduleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClassID" Type="int" />
+    <Property Name="Start_time" Type="time" Precision="7" />
+    <Property Name="End_time" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="class_type">
+    <Key>
+      <PropertyRef Name="class_typeID" />
+    </Key>
+    <Property Name="class_typeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="64" />
+    <Property Name="description" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Contact_Person">
+    <Key>
+      <PropertyRef Name="Contact_PersonID" />
+    </Key>
+    <Property Name="Contact_PersonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="first_name" Type="varchar" MaxLength="128" />
+    <Property Name="last_name" Type="varchar" MaxLength="128" />
+    <Property Name="title" Type="varchar" MaxLength="64" />
+    <Property Name="contact_number1" Type="varchar" MaxLength="128" />
+    <Property Name="contact_number2" Type="varchar" MaxLength="128" />
+    <Property Name="contact_email" Type="varchar" MaxLength="128" />
+    <Property Name="RelationWith_Student" Type="varchar" MaxLength="128" />
+    <Property Name="middle_name" Type="varchar" MaxLength="128" />
+    <Property Name="Address" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Contact_Person_Student">
+    <Key>
+      <PropertyRef Name="Contact_Person_StudentID" />
+    </Key>
+    <Property Name="Contact_Person_StudentID" Type="int" Nullable="false" />
+    <Property Name="Contact_PersonID" Type="int" />
+    <Property Name="StudentID" Type="int" />
+  </EntityType>
+  <EntityType Name="drop_Attendence_Reason">
+    <Key>
+      <PropertyRef Name="ReasonID" />
+    </Key>
+    <Property Name="ReasonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReasonText" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Instructor">
+    <Key>
+      <PropertyRef Name="InstructorID" />
+    </Key>
+    <Property Name="InstructorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="first_name" Type="varchar" MaxLength="128" />
+    <Property Name="last_name" Type="varchar" MaxLength="128" />
+    <Property Name="title" Type="varchar" MaxLength="64" />
+    <Property Name="birthdate" Type="date" />
+    <Property Name="contact" Type="varchar" MaxLength="128" />
+    <Property Name="contact_email" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'DB_Class.dbo.instructor_presence' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="instructor_presence">
+          <Property Name="instructorID" Type="int" />
+          <Property Name="Class_ScheduleID" Type="int" />
+          <Property Name="present" Type="bit" />
+        </EntityType>-->
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="first_name" Type="varchar" MaxLength="128" />
+    <Property Name="last_name" Type="varchar" MaxLength="128" />
+    <Property Name="birthdate" Type="date" />
+    <Property Name="contact" Type="varchar" MaxLength="128" />
+    <Property Name="contact_email" Type="varchar" MaxLength="128" />
+    <Property Name="Gender" Type="varchar" MaxLength="20" />
+    <Property Name="Adharcard" Type="bigint" />
+    <Property Name="middle_name" Type="varchar" MaxLength="128" />
+    <Property Name="LocalAddress" Type="varchar" MaxLength="500" />
+    <Property Name="PermanentAddress" Type="varchar" MaxLength="500" />
+    <Property Name="Present_Absent" Type="nvarchar" MaxLength="64" />
+    <Property Name="ClassTypeId" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'DB_Class.dbo.Student_presense' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Student_presense">
+          <Property Name="StudentID" Type="int" />
+          <Property Name="Class_ScheduleID" Type="int" />
+          <Property Name="present" Type="bit" />
+        </EntityType>-->
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Test">
+    <Key>
+      <PropertyRef Name="TestID" />
+    </Key>
+    <Property Name="TestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClassID" Type="int" />
+    <Property Name="TestName" Type="varchar" MaxLength="128" />
+    <Property Name="outOFF" Type="int" />
+  </EntityType>
+  <EntityType Name="Test_Attend_Marks">
+    <Key>
+      <PropertyRef Name="TAM_ID" />
+    </Key>
+    <Property Name="TAM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestID" Type="int" />
+    <Property Name="StudentID" Type="int" />
+    <Property Name="ClassID" Type="int" />
+    <Property Name="Attendence" Type="bit" />
+    <Property Name="Marks" Type="int" />
+  </EntityType>
+  <Association Name="FK__Attendanc__atten__5DCAEF64">
+    <End Role="attendence_outcome" Type="Self.attendence_outcome" Multiplicity="0..1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="attendence_outcome">
+        <PropertyRef Name="attendence_outcome" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="attendence_outcome" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Attendanc__Class__5BE2A6F2">
+    <End Role="Class" Type="Self.Class" Multiplicity="0..1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Attendanc__Reaso__5CD6CB2B">
+    <End Role="drop_Attendence_Reason" Type="Self.drop_Attendence_Reason" Multiplicity="0..1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="drop_Attendence_Reason">
+        <PropertyRef Name="ReasonID" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="ReasonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Attendanc__Stude__5AEE82B9">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Class__class_typ__4BAC3F29">
+    <End Role="class_type" Type="Self.class_type" Multiplicity="0..1" />
+    <End Role="Class" Type="Self.Class" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_type">
+        <PropertyRef Name="class_typeID" />
+      </Principal>
+      <Dependent Role="Class">
+        <PropertyRef Name="class_typeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Class_Sch__Class__4CA06362">
+    <End Role="Class" Type="Self.Class" Multiplicity="0..1" />
+    <End Role="Class_Schedule" Type="Self.Class_Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="Class_Schedule">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Contact_P__Conta__5165187F">
+    <End Role="Contact_Person" Type="Self.Contact_Person" Multiplicity="0..1" />
+    <End Role="Contact_Person_Student" Type="Self.Contact_Person_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact_Person">
+        <PropertyRef Name="Contact_PersonID" />
+      </Principal>
+      <Dependent Role="Contact_Person_Student">
+        <PropertyRef Name="Contact_PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Contact_P__Conta__52593CB8">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="Contact_Person_Student" Type="Self.Contact_Person_Student" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="Contact_Person_Student">
+        <PropertyRef Name="Contact_Person_StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'DB_Class.dbo.instructor_presence' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__instructo__Class__5070F446" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'DB_Class.dbo.instructor_presence' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__instructo__instr__4F7CD00D" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'DB_Class.dbo.Student_presense' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__Student_p__Class__4D94879B" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'DB_Class.dbo.Student_presense' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__Student_p__Stude__4E88ABD4" />-->
+  <Association Name="FK__Test__ClassID__5EBF139D">
+    <End Role="Class" Type="Self.Class" Multiplicity="0..1" />
+    <End Role="Test" Type="Self.Test" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="Test">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Test_Atte__Stude__60A75C0F">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="Test_Attend_Marks" Type="Self.Test_Attend_Marks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="Test_Attend_Marks">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Test_Atte__TestI__5FB337D6">
+    <End Role="Test" Type="Self.Test" Multiplicity="0..1" />
+    <End Role="Test_Attend_Marks" Type="Self.Test_Attend_Marks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="TestID" />
+      </Principal>
+      <Dependent Role="Test_Attend_Marks">
+        <PropertyRef Name="TestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="Contact_Person_Info" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="first_name" Type="varchar" Mode="In" />
+    <Parameter Name="last_name" Type="varchar" Mode="In" />
+    <Parameter Name="middle_name" Type="varchar" Mode="In" />
+    <Parameter Name="contact_number1" Type="varchar" Mode="In" />
+    <Parameter Name="contact_number2" Type="varchar" Mode="In" />
+    <Parameter Name="contact_email" Type="varchar" Mode="In" />
+    <Parameter Name="RelationWith_Student" Type="varchar" Mode="In" />
+    <Parameter Name="Address" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="Instructor_Info" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="first_name" Type="varchar" Mode="In" />
+    <Parameter Name="last_name" Type="varchar" Mode="In" />
+    <Parameter Name="title" Type="varchar" Mode="In" />
+    <Parameter Name="birthdate" Type="date" Mode="In" />
+    <Parameter Name="contact" Type="varchar" Mode="In" />
+    <Parameter Name="contact_email" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Student_Info" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="first_name" Type="varchar" Mode="In" />
+    <Parameter Name="middle_name" Type="varchar" Mode="In" />
+    <Parameter Name="last_name" Type="varchar" Mode="In" />
+    <Parameter Name="birthdate" Type="date" Mode="In" />
+    <Parameter Name="contact" Type="varchar" Mode="In" />
+    <Parameter Name="Gender" Type="varchar" Mode="In" />
+    <Parameter Name="contact_email" Type="varchar" Mode="In" />
+    <Parameter Name="LocalAddress" Type="varchar" Mode="In" />
+    <Parameter Name="PermanentAddress" Type="varchar" Mode="In" />
+    <Parameter Name="Adharcard" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="StudentInformation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="DB_ClassModelStoreContainer">
+    <EntitySet Name="Attendance" EntityType="Self.Attendance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="attendence_outcome" EntityType="Self.attendence_outcome" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Class" EntityType="Self.Class" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Class_Schedule" EntityType="Self.Class_Schedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="class_type" EntityType="Self.class_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact_Person" EntityType="Self.Contact_Person" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact_Person_Student" EntityType="Self.Contact_Person_Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="drop_Attendence_Reason" EntityType="Self.drop_Attendence_Reason" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Instructor" EntityType="Self.Instructor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Test" EntityType="Self.Test" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Test_Attend_Marks" EntityType="Self.Test_Attend_Marks" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Attendanc__atten__5DCAEF64" Association="Self.FK__Attendanc__atten__5DCAEF64">
+      <End Role="attendence_outcome" EntitySet="attendence_outcome" />
+      <End Role="Attendance" EntitySet="Attendance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Attendanc__Class__5BE2A6F2" Association="Self.FK__Attendanc__Class__5BE2A6F2">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="Attendance" EntitySet="Attendance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Attendanc__Reaso__5CD6CB2B" Association="Self.FK__Attendanc__Reaso__5CD6CB2B">
+      <End Role="drop_Attendence_Reason" EntitySet="drop_Attendence_Reason" />
+      <End Role="Attendance" EntitySet="Attendance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Attendanc__Stude__5AEE82B9" Association="Self.FK__Attendanc__Stude__5AEE82B9">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Attendance" EntitySet="Attendance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Class__class_typ__4BAC3F29" Association="Self.FK__Class__class_typ__4BAC3F29">
+      <End Role="class_type" EntitySet="class_type" />
+      <End Role="Class" EntitySet="Class" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Class_Sch__Class__4CA06362" Association="Self.FK__Class_Sch__Class__4CA06362">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="Class_Schedule" EntitySet="Class_Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Contact_P__Conta__5165187F" Association="Self.FK__Contact_P__Conta__5165187F">
+      <End Role="Contact_Person" EntitySet="Contact_Person" />
+      <End Role="Contact_Person_Student" EntitySet="Contact_Person_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Contact_P__Conta__52593CB8" Association="Self.FK__Contact_P__Conta__52593CB8">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Contact_Person_Student" EntitySet="Contact_Person_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Test__ClassID__5EBF139D" Association="Self.FK__Test__ClassID__5EBF139D">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="Test" EntitySet="Test" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Test_Atte__Stude__60A75C0F" Association="Self.FK__Test_Atte__Stude__60A75C0F">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Test_Attend_Marks" EntitySet="Test_Attend_Marks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Test_Atte__TestI__5FB337D6" Association="Self.FK__Test_Atte__TestI__5FB337D6">
+      <End Role="Test" EntitySet="Test" />
+      <End Role="Test_Attend_Marks" EntitySet="Test_Attend_Marks" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

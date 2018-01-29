@@ -1,0 +1,83 @@
+﻿@*@using System.Data
+    @model DataSet
+        @{
+            Layout = null;
+        }
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Data</title>
+    </head>
+    <body>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th>StudentID</th>
+                <th>FirstName</th>
+                <th>ClassTypeID</th>
+            </tr>
+            @foreach (DataRow row in Model.Tables[0].Rows)
+            {
+            <tr>
+                <td>@row["StudentID"]</td>
+                <td>@row["first_name"]</td>
+                <td>@row["ClassTypeId"]</td>
+            </tr>
+            }
+        </table>
+    </body>
+    </html>*@
+
+@model IEnumerable<WebApplication5.Models.StudentInformation_Result>
+@{
+    ViewBag.Title = "StudentDetailList";
+}
+<style>
+    table, td, th {
+        border: 1px solid green;
+        border-collapse: collapse;
+        width: 30%;
+    }
+
+    th {
+        border: 1px solid black;
+        background-color: green;
+        color: white;
+    }
+</style>
+
+@using (@Html.BeginForm("Index", "Home"))
+{
+    var grid = new WebGrid(Model,  canPage: true, canSort: true, rowsPerPage: 100);
+    grid.Pager(WebGridPagerModes.NextPrevious);
+    <div>
+        <header>
+            <h1>Student detaisl</h1>
+        </header>
+    </div>
+    <div>
+        @grid.GetHtml(columns:
+                                            grid.Columns
+                                            (
+                                                grid.Column("StudentID", "StudentID"),
+                                                grid.Column("first_names", "first_names"),
+                                                grid.Column("last_names", "last_names"),
+                                                grid.Column("birthdate", "birthdate"),
+                                                grid.Column("contact", "contact"),
+                                                grid.Column("contact_emails", "contact_emails"),
+                                                grid.Column("Gender", "Gender"),
+                                                grid.Column("AdharNumber", "AdharNumber"),
+                                                grid.Column("middle_names", "middle_names"),
+                                                grid.Column("LocalAddress", "LocalAddress"),
+                                                grid.Column("ClassTypeId", "ClassTypeId"),
+                                                grid.Column("", "", format: @<text><a href="/Home/Edit/?stuId=@item.StudentID">edit</a></text>),
+                                                                  grid.Column("", "", format: @<text><a href="/Home/Delete/?stuId=@item.StudentID ">Delete</a></text>)
+
+                                                                                    ), mode: WebGridPagerModes.Numeric)
+    </div>
+    <div>
+        <a href="/Home/SaveRecord/">Add New Record</a>
+    </div>
+
+
+}
