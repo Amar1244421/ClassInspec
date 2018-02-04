@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_ClassManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Attendance">
+    <Key>
+      <PropertyRef Name="AttendID" />
+    </Key>
+    <Property Name="AttendID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentID" Type="Int32" />
+    <Property Name="Class_LectureID" Type="Int32" />
+    <Property Name="class_enrollment_date" Type="DateTime" Precision="0" />
+    <Property Name="class_drop_date" Type="DateTime" Precision="0" />
+    <Property Name="ReasonID" Type="Int32" />
+    <Property Name="attendence_outcome" Type="Int32" />
+    <NavigationProperty Name="Attendence_outcome1" Relationship="Self.FK__Attendanc__atten__628FA481" FromRole="Attendance" ToRole="Attendence_outcome" />
+    <NavigationProperty Name="Class_Lecture" Relationship="Self.FK__Attendanc__Class__6383C8BA" FromRole="Attendance" ToRole="Class_Lecture" />
+    <NavigationProperty Name="drop_Attendence_Reason" Relationship="Self.FK__Attendanc__Reaso__6477ECF3" FromRole="Attendance" ToRole="drop_Attendence_Reason" />
+    <NavigationProperty Name="Student" Relationship="Self.FK__Attendanc__Stude__656C112C" FromRole="Attendance" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Attendence_outcome">
+    <Key>
+      <PropertyRef Name="Attendence_outcome1" />
+    </Key>
+    <Property Name="Attendence_outcome1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OutcomeText" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__atten__628FA481" FromRole="Attendence_outcome" ToRole="Attendance" />
+  </EntityType>
+  <EntityType Name="Class_Lecture">
+    <Key>
+      <PropertyRef Name="Class_LectureID" />
+    </Key>
+    <Property Name="Class_LectureID" Type="Int32" Nullable="false" />
+    <Property Name="Class_typeID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Description_Of_Class_Lecture" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Startdate" Type="DateTime" Precision="0" />
+    <Property Name="Enddate" Type="DateTime" Precision="0" />
+    <Property Name="Completed" Type="Boolean" />
+    <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__Class__6383C8BA" FromRole="Class_Lecture" ToRole="Attendance" />
+    <NavigationProperty Name="class_type" Relationship="Self.FK__Class_Lec__Class__619B8048" FromRole="Class_Lecture" ToRole="class_type" />
+    <NavigationProperty Name="Class_Schedule" Relationship="Self.FK__Class_Sch__Class__60A75C0F" FromRole="Class_Lecture" ToRole="Class_Schedule" />
+  </EntityType>
+  <EntityType Name="Class_Schedule">
+    <Key>
+      <PropertyRef Name="Class_ScheduleID" />
+    </Key>
+    <Property Name="Class_ScheduleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Class_LectureID" Type="Int32" />
+    <Property Name="Start_time" Type="Time" Precision="7" />
+    <Property Name="End_time" Type="Time" Precision="7" />
+    <NavigationProperty Name="Class_Lecture" Relationship="Self.FK__Class_Sch__Class__60A75C0F" FromRole="Class_Schedule" ToRole="Class_Lecture" />
+  </EntityType>
+  <EntityType Name="class_type">
+    <Key>
+      <PropertyRef Name="class_typeID" />
+    </Key>
+    <Property Name="class_typeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Class_Lecture" Relationship="Self.FK__Class_Lec__Class__619B8048" FromRole="class_type" ToRole="Class_Lecture" />
+    <NavigationProperty Name="FeeStructures" Relationship="Self.FK__FeeStruct__Class__571DF1D5" FromRole="class_type" ToRole="FeeStructure" />
+  </EntityType>
+  <EntityType Name="Contact_Person">
+    <Key>
+      <PropertyRef Name="Contact_PersonID" />
+    </Key>
+    <Property Name="Contact_PersonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="title" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="contact_number1" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="contact_number2" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="contact_email" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="RelationWith_Student" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="middle_name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Contact_Person_Student" Relationship="Self.FK__Contact_P__Conta__5CD6CB2B" FromRole="Contact_Person" ToRole="Contact_Person_Student" />
+  </EntityType>
+  <EntityType Name="Contact_Person_Student">
+    <Key>
+      <PropertyRef Name="Contact_Person_StudentID" />
+    </Key>
+    <Property Name="Contact_Person_StudentID" Type="Int32" Nullable="false" />
+    <Property Name="Contact_PersonID" Type="Int32" />
+    <Property Name="StudentID" Type="Int32" />
+    <NavigationProperty Name="Contact_Person" Relationship="Self.FK__Contact_P__Conta__5CD6CB2B" FromRole="Contact_Person_Student" ToRole="Contact_Person" />
+    <NavigationProperty Name="Student" Relationship="Self.FK__Contact_P__Conta__5DCAEF64" FromRole="Contact_Person_Student" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="drop_Attendence_Reason">
+    <Key>
+      <PropertyRef Name="ReasonID" />
+    </Key>
+    <Property Name="ReasonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReasonText" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__Reaso__6477ECF3" FromRole="drop_Attendence_Reason" ToRole="Attendance" />
+  </EntityType>
+  <EntityType Name="FeeStructure">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Class_typeID" Type="Int32" />
+    <Property Name="FeeDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Int64" />
+    <Property Name="Total_Amount" Type="Int64" />
+    <NavigationProperty Name="class_type" Relationship="Self.FK__FeeStruct__Class__571DF1D5" FromRole="FeeStructure" ToRole="class_type" />
+  </EntityType>
+  <EntityType Name="Instructor">
+    <Key>
+      <PropertyRef Name="InstructorID" />
+    </Key>
+    <Property Name="InstructorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="title" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="birthdate" Type="DateTime" Precision="0" />
+    <Property Name="contact" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="contact_email" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PaymentDetail">
+    <Key>
+      <PropertyRef Name="PaymentID" />
+    </Key>
+    <Property Name="PaymentID" Type="Int32" Nullable="false" />
+    <Property Name="StudentID" Type="Int32" />
+    <Property Name="TypeOfPayment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumberOfPayments" Type="Int32" />
+    <Property Name="EMI_amount" Type="Int64" />
+    <Property Name="AmountPaid" Type="Int64" />
+    <Property Name="TotalAmount" Type="Int64" />
+    <NavigationProperty Name="Student" Relationship="Self.FK__PaymentDe__Stude__68487DD7" FromRole="PaymentDetails" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="birthdate" Type="DateTime" Precision="0" />
+    <Property Name="contact" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="contact_email" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Adharcard" Type="Int64" />
+    <Property Name="middle_name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="LocalAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PermanentAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Present_Absent" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="class_typeID" Type="Int32" />
+    <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__Stude__656C112C" FromRole="Student" ToRole="Attendance" />
+    <NavigationProperty Name="Contact_Person_Student" Relationship="Self.FK__Contact_P__Conta__5DCAEF64" FromRole="Student" ToRole="Contact_Person_Student" />
+    <NavigationProperty Name="PaymentDetails" Relationship="Self.FK__PaymentDe__Stude__68487DD7" FromRole="Student" ToRole="PaymentDetails" />
+  </EntityType>
+  <Association Name="FK__Attendanc__atten__628FA481">
+    <End Role="Attendence_outcome" Type="Self.Attendence_outcome" Multiplicity="0..1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Attendence_outcome">
+        <PropertyRef Name="Attendence_outcome1" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="attendence_outcome" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Attendanc__Class__6383C8BA">
+    <End Role="Class_Lecture" Type="Self.Class_Lecture" Multiplicity="0..1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class_Lecture">
+        <PropertyRef Name="Class_LectureID" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="Class_LectureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Attendanc__Reaso__6477ECF3">
+    <End Role="drop_Attendence_Reason" Type="Self.drop_Attendence_Reason" Multiplicity="0..1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="drop_Attendence_Reason">
+        <PropertyRef Name="ReasonID" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="ReasonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Attendanc__Stude__656C112C">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Class_Lec__Class__619B8048">
+    <End Role="class_type" Type="Self.class_type" Multiplicity="0..1" />
+    <End Role="Class_Lecture" Type="Self.Class_Lecture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_type">
+        <PropertyRef Name="class_typeID" />
+      </Principal>
+      <Dependent Role="Class_Lecture">
+        <PropertyRef Name="Class_typeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Class_Sch__Class__60A75C0F">
+    <End Role="Class_Lecture" Type="Self.Class_Lecture" Multiplicity="0..1" />
+    <End Role="Class_Schedule" Type="Self.Class_Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class_Lecture">
+        <PropertyRef Name="Class_LectureID" />
+      </Principal>
+      <Dependent Role="Class_Schedule">
+        <PropertyRef Name="Class_LectureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FeeStruct__Class__571DF1D5">
+    <End Role="class_type" Type="Self.class_type" Multiplicity="0..1" />
+    <End Role="FeeStructure" Type="Self.FeeStructure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_type">
+        <PropertyRef Name="class_typeID" />
+      </Principal>
+      <Dependent Role="FeeStructure">
+        <PropertyRef Name="Class_typeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Contact_P__Conta__5CD6CB2B">
+    <End Role="Contact_Person" Type="Self.Contact_Person" Multiplicity="0..1" />
+    <End Role="Contact_Person_Student" Type="Self.Contact_Person_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact_Person">
+        <PropertyRef Name="Contact_PersonID" />
+      </Principal>
+      <Dependent Role="Contact_Person_Student">
+        <PropertyRef Name="Contact_PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Contact_P__Conta__5DCAEF64">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="Contact_Person_Student" Type="Self.Contact_Person_Student" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="Contact_Person_Student">
+        <PropertyRef Name="Contact_Person_StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PaymentDe__Stude__68487DD7">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="PaymentDetails" Type="Self.PaymentDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="PaymentDetails">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_ClassManagementEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Attendances" EntityType="Self.Attendance" />
+    <EntitySet Name="Attendence_outcome" EntityType="Self.Attendence_outcome" />
+    <EntitySet Name="Class_Lecture" EntityType="Self.Class_Lecture" />
+    <EntitySet Name="Class_Schedule" EntityType="Self.Class_Schedule" />
+    <EntitySet Name="class_type" EntityType="Self.class_type" />
+    <EntitySet Name="Contact_Person" EntityType="Self.Contact_Person" />
+    <EntitySet Name="Contact_Person_Student" EntityType="Self.Contact_Person_Student" />
+    <EntitySet Name="drop_Attendence_Reason" EntityType="Self.drop_Attendence_Reason" />
+    <EntitySet Name="FeeStructures" EntityType="Self.FeeStructure" />
+    <EntitySet Name="Instructors" EntityType="Self.Instructor" />
+    <EntitySet Name="PaymentDetails" EntityType="Self.PaymentDetail" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <AssociationSet Name="FK__Attendanc__atten__628FA481" Association="Self.FK__Attendanc__atten__628FA481">
+      <End Role="Attendence_outcome" EntitySet="Attendence_outcome" />
+      <End Role="Attendance" EntitySet="Attendances" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Attendanc__Class__6383C8BA" Association="Self.FK__Attendanc__Class__6383C8BA">
+      <End Role="Class_Lecture" EntitySet="Class_Lecture" />
+      <End Role="Attendance" EntitySet="Attendances" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Attendanc__Reaso__6477ECF3" Association="Self.FK__Attendanc__Reaso__6477ECF3">
+      <End Role="drop_Attendence_Reason" EntitySet="drop_Attendence_Reason" />
+      <End Role="Attendance" EntitySet="Attendances" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Attendanc__Stude__656C112C" Association="Self.FK__Attendanc__Stude__656C112C">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="Attendance" EntitySet="Attendances" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Class_Lec__Class__619B8048" Association="Self.FK__Class_Lec__Class__619B8048">
+      <End Role="class_type" EntitySet="class_type" />
+      <End Role="Class_Lecture" EntitySet="Class_Lecture" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Class_Sch__Class__60A75C0F" Association="Self.FK__Class_Sch__Class__60A75C0F">
+      <End Role="Class_Lecture" EntitySet="Class_Lecture" />
+      <End Role="Class_Schedule" EntitySet="Class_Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FeeStruct__Class__571DF1D5" Association="Self.FK__FeeStruct__Class__571DF1D5">
+      <End Role="class_type" EntitySet="class_type" />
+      <End Role="FeeStructure" EntitySet="FeeStructures" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Contact_P__Conta__5CD6CB2B" Association="Self.FK__Contact_P__Conta__5CD6CB2B">
+      <End Role="Contact_Person" EntitySet="Contact_Person" />
+      <End Role="Contact_Person_Student" EntitySet="Contact_Person_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Contact_P__Conta__5DCAEF64" Association="Self.FK__Contact_P__Conta__5DCAEF64">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="Contact_Person_Student" EntitySet="Contact_Person_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PaymentDe__Stude__68487DD7" Association="Self.FK__PaymentDe__Stude__68487DD7">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="PaymentDetails" EntitySet="PaymentDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
