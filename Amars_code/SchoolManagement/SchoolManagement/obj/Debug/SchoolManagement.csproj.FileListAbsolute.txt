@@ -1,0 +1,141 @@
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\roslyn\csc.exe
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\roslyn\System.Collections.Immutable.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\roslyn\vbc.exe
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\roslyn\VBCSCompiler.exe
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\roslyn\VBCSCompiler.exe.config
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\SchoolManagement.dll.config
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\SchoolManagement.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\SchoolManagement.pdb
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Antlr3.Runtime.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\EntityFramework.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\EntityFramework.SqlServer.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Google.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Web.Infrastructure.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Newtonsoft.Json.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Owin.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\System.Web.Helpers.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\System.Web.Mvc.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\System.Web.Optimization.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\System.Web.Razor.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\System.Web.WebPages.Deployment.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\System.Web.WebPages.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\System.Web.WebPages.Razor.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\WebGrease.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\System.Web.Helpers.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\System.Web.Mvc.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\System.Web.Optimization.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\System.Web.Razor.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\System.Web.WebPages.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\System.Web.WebPages.Deployment.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\System.Web.WebPages.Razor.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Antlr3.Runtime.pdb
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Newtonsoft.Json.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\EntityFramework.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\EntityFramework.SqlServer.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Google.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.csprojResolveAssemblyReference.cache
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.pdb
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.csprojResolveAssemblyReference.cache
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.csproj.CoreCompileInputs.cache
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\obj\Debug\SchoolManagement.pdb
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\roslyn\csc.exe
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\roslyn\vbc.exe
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\roslyn\VBCSCompiler.exe
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\SchoolManagement.dll.config
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\SchoolManagement.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\SchoolManagement.pdb
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Antlr3.Runtime.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\EntityFramework.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\EntityFramework.SqlServer.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\EPPlus.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Newtonsoft.Json.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Owin.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\System.Web.Helpers.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\System.Web.Mvc.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\System.Web.Optimization.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\System.Web.Razor.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\System.Web.WebPages.Deployment.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\System.Web.WebPages.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\System.Web.WebPages.Razor.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\WebGrease.dll
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\EPPlus.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\System.Web.Helpers.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\System.Web.Mvc.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\System.Web.Optimization.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\System.Web.Razor.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\System.Web.WebPages.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\System.Web.WebPages.Deployment.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\System.Web.WebPages.Razor.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Antlr3.Runtime.pdb
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Newtonsoft.Json.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\EntityFramework.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\EntityFramework.SqlServer.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\AmarWagh\Documents\GitHub\ClassInspec_omkar\SchoolManagement\SchoolManagement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml

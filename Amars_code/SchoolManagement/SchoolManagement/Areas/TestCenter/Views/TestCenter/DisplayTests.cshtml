@@ -1,0 +1,57 @@
+﻿
+
+@model IEnumerable<SchoolManagement.Areas.TestCenter.Models.TestCenter>
+
+
+@{
+    ViewBag.Title = "DisplayTests";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DisplayTests</h2>
+
+<style>
+    table, td, th {
+        border: 1px solid green;
+        border-collapse: collapse;
+        width: 30%;
+    }
+
+    th {
+        border: 1px solid black;
+        background-color: green;
+        color: white;
+    }
+</style>
+
+@using (@Html.BeginForm("Index", "Home"))
+{
+    var grid = new WebGrid(Model, canPage: true, canSort: true, rowsPerPage: 100);
+    grid.Pager(WebGridPagerModes.NextPrevious);
+    <div>
+        <header>
+            <h1>Student detaisl</h1>
+        </header>
+    </div>
+    <div>
+        @grid.GetHtml(columns:
+                                                                          grid.Columns
+                                                                          (
+                                                                              grid.Column("TestID", "TestID"),
+                                                                              grid.Column("ClassID", "ClassID"),
+                                                                              grid.Column("TestName", "TestName"),
+                                                                              grid.Column("outOFF", "outOFF"),
+                                                                              grid.Column("Description", "Description")
+
+                                                                                                     ), mode: WebGridPagerModes.Numeric)
+    </div>
+    <div>
+        <a href="/Home/SaveRecord/">Add New Record</a>
+    </div>
+
+
+}
+
+
+
+

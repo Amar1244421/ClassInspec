@@ -1,0 +1,32 @@
+﻿
+@model SchoolManagement.Areas.TestCenter.Models.TestCenter
+@{
+    ViewBag.Title = "GetTestCenter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<style>
+    table, td, th {
+        border: 1px solid green;
+        border-collapse: collapse;
+        width: 30%;
+    }
+
+    th {
+        border: 1px solid black;
+        background-color: green;
+        color: white;
+    }
+</style>
+
+@using (Html.BeginForm("DisplayTests", "TestCenter", FormMethod.Post))
+{
+
+    <label >Enter Class ID</label>
+    @Html.TextBox("text");
+    
+    <button type="submit" class="btn btn-default">Submit</button>
+
+}
