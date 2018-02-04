@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_ClassModelStoreContainer" CdmEntityContainer="DB_ClassEntities">
+    <EntitySetMapping Name="Classes">
+      <EntityTypeMapping TypeName="DB_ClassModel.Class">
+        <MappingFragment StoreEntitySet="Class">
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="Description_Of_Class" ColumnName="Description_Of_Class" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="class_typeID" ColumnName="class_typeID" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Class_Schedule">
+      <EntityTypeMapping TypeName="DB_ClassModel.Class_Schedule">
+        <MappingFragment StoreEntitySet="Class_Schedule">
+          <ScalarProperty Name="End_time" ColumnName="End_time" />
+          <ScalarProperty Name="Start_time" ColumnName="Start_time" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="Class_ScheduleID" ColumnName="Class_ScheduleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contact_Person">
+      <EntityTypeMapping TypeName="DB_ClassModel.Contact_Person">
+        <MappingFragment StoreEntitySet="Contact_Person">
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+          <ScalarProperty Name="RelationWith_Student" ColumnName="RelationWith_Student" />
+          <ScalarProperty Name="contact_email" ColumnName="contact_email" />
+          <ScalarProperty Name="contact_number2" ColumnName="contact_number2" />
+          <ScalarProperty Name="contact_number1" ColumnName="contact_number1" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="Contact_PersonID" ColumnName="Contact_PersonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contact_Person_Student">
+      <EntityTypeMapping TypeName="DB_ClassModel.Contact_Person_Student">
+        <MappingFragment StoreEntitySet="Contact_Person_Student">
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="Contact_PersonID" ColumnName="Contact_PersonID" />
+          <ScalarProperty Name="Contact_Person_StudentID" ColumnName="Contact_Person_StudentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instructors">
+      <EntityTypeMapping TypeName="DB_ClassModel.Instructor">
+        <MappingFragment StoreEntitySet="Instructor">
+          <ScalarProperty Name="contact_email" ColumnName="contact_email" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="DB_ClassModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="ClassTypeId" ColumnName="ClassTypeId" />
+          <ScalarProperty Name="Present_Absent" ColumnName="Present_Absent" />
+          <ScalarProperty Name="PermanentAddress" ColumnName="PermanentAddress" />
+          <ScalarProperty Name="LocalAddress" ColumnName="LocalAddress" />
+          <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+          <ScalarProperty Name="Adharcard" ColumnName="Adharcard" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="contact_email" ColumnName="contact_email" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tests">
+      <EntityTypeMapping TypeName="DB_ClassModel.Test">
+        <MappingFragment StoreEntitySet="Test">
+          <ScalarProperty Name="outOFF" ColumnName="outOFF" />
+          <ScalarProperty Name="TestName" ColumnName="TestName" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="TestID" ColumnName="TestID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Test_Attend_Marks">
+      <EntityTypeMapping TypeName="DB_ClassModel.Test_Attend_Marks">
+        <MappingFragment StoreEntitySet="Test_Attend_Marks">
+          <ScalarProperty Name="Marks" ColumnName="Marks" />
+          <ScalarProperty Name="Attendence" ColumnName="Attendence" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="TestID" ColumnName="TestID" />
+          <ScalarProperty Name="TAM_ID" ColumnName="TAM_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attendances">
+      <EntityTypeMapping TypeName="DB_ClassModel.Attendance">
+        <MappingFragment StoreEntitySet="Attendance">
+          <ScalarProperty Name="attendence_outcome" ColumnName="attendence_outcome" />
+          <ScalarProperty Name="ReasonID" ColumnName="ReasonID" />
+          <ScalarProperty Name="class_drop_date" ColumnName="class_drop_date" />
+          <ScalarProperty Name="class_enrollment_date" ColumnName="class_enrollment_date" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="AttendID" ColumnName="AttendID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="attendence_outcome">
+      <EntityTypeMapping TypeName="DB_ClassModel.attendence_outcome">
+        <MappingFragment StoreEntitySet="attendence_outcome">
+          <ScalarProperty Name="OutcomeText" ColumnName="OutcomeText" />
+          <ScalarProperty Name="attendence_outcome1" ColumnName="attendence_outcome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="class_type">
+      <EntityTypeMapping TypeName="DB_ClassModel.class_type">
+        <MappingFragment StoreEntitySet="class_type">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="class_typeID" ColumnName="class_typeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="drop_Attendence_Reason">
+      <EntityTypeMapping TypeName="DB_ClassModel.drop_Attendence_Reason">
+        <MappingFragment StoreEntitySet="drop_Attendence_Reason">
+          <ScalarProperty Name="ReasonText" ColumnName="ReasonText" />
+          <ScalarProperty Name="ReasonID" ColumnName="ReasonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DB_ClassModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Contact_Person_Info" FunctionName="DB_ClassModel.Store.Contact_Person_Info" />
+    <FunctionImportMapping FunctionImportName="Instructor_Info" FunctionName="DB_ClassModel.Store.Instructor_Info" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DB_ClassModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DB_ClassModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DB_ClassModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DB_ClassModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_ClassModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DB_ClassModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_ClassModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DB_ClassModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DB_ClassModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="Student_Info" FunctionName="DB_ClassModel.Store.Student_Info" />
+    <FunctionImportMapping FunctionImportName="StudentInformation" FunctionName="DB_ClassModel.Store.StudentInformation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_ClassModel.StudentInformation_Result">
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="contact_email" ColumnName="contact_email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Adharcard" ColumnName="Adharcard" />
+          <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+          <ScalarProperty Name="LocalAddress" ColumnName="LocalAddress" />
+          <ScalarProperty Name="PermanentAddress" ColumnName="PermanentAddress" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

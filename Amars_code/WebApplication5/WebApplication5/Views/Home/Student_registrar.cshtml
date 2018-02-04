@@ -1,0 +1,49 @@
+﻿@model WebApplication5.Models.StudentInformation_Result
+@{
+    ViewBag.Title = "StudentDetailList";
+}
+
+<style>
+    table, td, th {
+        border: 1px solid green;
+        border-collapse: collapse;
+        width: 30%;
+    }
+
+    th {
+        border: 1px solid black;
+        background-color: green;
+        color: white;
+    }
+</style>
+
+@*@using (@Html.BeginForm("Student_registrar", "Home"))
+{
+
+    <div>
+        <header>
+            <h1>Student detaisl</h1>
+        </header>
+    </div>
+    <div>
+        <input type="text"
+               id="mytext"
+               value="insert class id" />
+        <input type="button" value="Edit" onclick="location.href='<%: Url.Action(" Edit", "Home" ) %>'" />
+
+
+    </div>
+    <div>
+        <a href="/Home/SaveRecord/">Add New Record</a>
+    </div>
+
+
+}*@
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+{
+
+        @Html.TextBox("text");
+        <textarea id="text"></textarea>
+        <button type="submit" class="btn btn-default">Submit</button>
+
+}
